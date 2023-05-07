@@ -8,7 +8,9 @@ int sum(int count, ...)
     int sum = 0;
     for (int i = 0; i < count; i++)
     {
-        sum += va_arg(args, int);
+        int arg = va_arg(args, int);
+        sum += arg;
+        printf("%d ", arg);
     }
     va_end(args);
     return sum;
